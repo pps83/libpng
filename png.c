@@ -94,8 +94,8 @@ png_sig_cmp(png_const_bytep sig, png_size_t start, png_size_t num_to_check)
 
 #if defined(PNG_READ_SUPPORTED) || defined(PNG_WRITE_SUPPORTED)
 /* Function to allocate memory for zlib */
-PNG_FUNCTION(voidpf /* PRIVATE */,
-png_zalloc,(voidpf png_ptr, uInt items, uInt size),PNG_ALLOCATED)
+PNG_FUNCTION(voidp /* PRIVATE */,
+png_zalloc,(voidp png_ptr, uInt items, uInt size),PNG_ALLOCATED)
 {
    png_alloc_size_t num_bytes = size;
 
@@ -115,7 +115,7 @@ png_zalloc,(voidpf png_ptr, uInt items, uInt size),PNG_ALLOCATED)
 
 /* Function to free memory for zlib */
 void /* PRIVATE */
-png_zfree(voidpf png_ptr, voidpf ptr)
+png_zfree(voidp png_ptr, voidp ptr)
 {
    png_free(png_voidcast(png_const_structrp,png_ptr), ptr);
 }

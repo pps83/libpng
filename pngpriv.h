@@ -1040,11 +1040,11 @@ PNG_INTERNAL_FUNCTION(void,png_destroy_png_struct,(png_structrp png_ptr),
 PNG_INTERNAL_FUNCTION(void,png_free_jmpbuf,(png_structrp png_ptr),PNG_EMPTY);
 
 /* Function to allocate memory for zlib.  PNGAPI is disallowed. */
-PNG_INTERNAL_FUNCTION(voidpf,png_zalloc,(voidpf png_ptr, uInt items, uInt size),
+PNG_INTERNAL_FUNCTION(voidp,png_zalloc,(voidp png_ptr, uInt items, uInt size),
    PNG_ALLOCATED);
 
 /* Function to free memory for zlib.  PNGAPI is disallowed. */
-PNG_INTERNAL_FUNCTION(void,png_zfree,(voidpf png_ptr, voidpf ptr),PNG_EMPTY);
+PNG_INTERNAL_FUNCTION(void,png_zfree,(voidp png_ptr, voidp ptr),PNG_EMPTY);
 
 /* Next four functions are used internally as callbacks.  PNGCBAPI is required
  * but not PNG_EXPORT.  PNGAPI added at libpng version 1.2.3, changed to
