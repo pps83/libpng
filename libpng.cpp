@@ -16,3 +16,7 @@
 #include "pngwrite.c"
 #include "pngwtran.c"
 #include "pngwutil.c"
+
+#ifdef _WINDLL
+#include "zlib.cpp"
+#endif
