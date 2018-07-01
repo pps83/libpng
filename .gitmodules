@@ -1,3 +1,4 @@
 [submodule "contrib/zlib"]
 	path = contrib/zlib
 	url = ../zlib.git
+	branch = master
